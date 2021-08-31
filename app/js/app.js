@@ -1,8 +1,9 @@
 const cardContainer = document.querySelector('.card-container');
 const inputContainer = document.querySelector('input');
 const searchButton = document.querySelector('#search');
-
-
+const trendingButton = document.querySelector('.trending');
+const libraryButton = document.querySelector('.library');
+const subButton= document.querySelector('.sub');
 
 const api_key = 'AIzaSyB2hbofkj-C5W9JVOdqAXmWeoGSQuFB044';
 let channelId;
@@ -66,6 +67,21 @@ const renderCart = (data) => {
     `;
 
 };
+
+trendingButton.addEventListener('click', () => {
+
+    location.href = 'https://www.youtube.com/feed/trending';
+});
+
+libraryButton.addEventListener('click', () => {
+
+    location.href = 'https://www.youtube.com/feed/library';
+});
+
+subButton.addEventListener('click', () => {
+
+    location.href = 'https://www.youtube.com/feed/subscriptions';
+});
 
 renderCart();
 
